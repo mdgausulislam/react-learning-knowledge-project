@@ -1,0 +1,73 @@
+.data {
+    margin-bottom: 50px;
+    border: 2px solid red;
+    padding-bottom: 30px;
+}
+
+.image-caption {
+    width: 100%;
+    height: 450px;
+}
+
+.profile-caption {
+    height: 60px;
+    width: 60px;
+}
+
+.profile-info {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-details {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.profile-name {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 24px;
+}
+
+.date-name {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+.text-name {
+    width: 737px;
+    color: #111;
+    font-family: Exo 2;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+}
+
+.mark {
+    text-decoration: underline;
+}
+
+.reading {
+    display: flex;
+    align-items: center;
+}
+
+.read {
+    margin-right: 10px;
+    color: rgba(17, 17, 17, 0.60);
+    text-align: right;
+    font-family: Exo 2;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.icon-read{
+    margin-right: 24px;
+}

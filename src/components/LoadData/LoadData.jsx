@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './LoadData.css';
+import Data from '../Data/Data';
 
 const LoadData = () => {
 
@@ -12,7 +13,12 @@ const LoadData = () => {
     return (
         <div className="data-container">
             <div className="learning-container">
-                <h1>Hemonto:{lerner.length}</h1>
+                {
+                    lerner.map(lerner1=><Data
+                    key={lerner1.id}
+                    lerner1={lerner1}
+                    ></Data>)
+                }
             </div>
             <div className="blog-container">
                 <h1>Hemonto</h1>
