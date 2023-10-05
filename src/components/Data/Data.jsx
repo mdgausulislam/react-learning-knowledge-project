@@ -2,7 +2,7 @@ import React from 'react';
 import './Data.css';
 
 const Data = (props) => {
-    const { img, profile, name, date, reading, icon, coder, coder1,text} = props.lerner1;
+    const { img, profile, name, date, reading, icon, coder, coder1, text } = props.lerner1;
     return (
         <div className="data">
             <img className="image-caption" src={img} alt="" />
@@ -21,13 +21,17 @@ const Data = (props) => {
                     <img className="icon-read" src={icon} alt="" />
                 </div>
             </div>
+            <div className="info-details">
+                <h1 className="text-name">{text}</h1>
+                <div className="coder">
+                    <p>{coder}</p>
+                    <p>{coder1}</p>
+                </div>
+                <a className="mark" href="/mark">Mark as read</a>
+            </div>
 
-            <h1 className="text-name">{text}</h1>
 
-            <p>{coder}</p>
-            <p>{coder1}</p>
-            <a className="mark" href="/mark">Mark as read</a>
-            <br/>
+            <br />
         </div>
     );
 };

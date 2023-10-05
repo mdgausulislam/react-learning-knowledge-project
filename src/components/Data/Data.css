@@ -1,12 +1,16 @@
 .data {
     margin-bottom: 50px;
-    border: 2px solid red;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
     padding-bottom: 30px;
+    border-radius: 20px;
 }
 
 .image-caption {
-    width: 100%;
+    width: 860px;
     height: 450px;
+    border-radius: 10px;
+    margin: 24px;
 }
 
 .profile-caption {
@@ -19,6 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-left: 24px;
 }
 
 .profile-details {
@@ -51,6 +56,13 @@
 
 .mark {
     text-decoration: underline;
+    color: #6047EC;
+    font-family: Exo 2;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-line: underline;
 }
 
 .reading {
@@ -68,6 +80,21 @@
     font-weight: 500;
     line-height: normal;
 }
-.icon-read{
+
+.icon-read {
     margin-right: 24px;
+    filter: drop-shadow(5px,5px,5px rgba(0,0,0,0.8));
+}
+
+.coder {
+    display: flex;
+    align-items: center;
+}
+
+.coder p {
+    margin-right: 15px;
+}
+
+.info-details {
+    padding-left: 24px;
 }
