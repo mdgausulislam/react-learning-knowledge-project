@@ -21,3 +21,17 @@ nav {
 .navbar a:hover {
     color: orangered;
 }
+
+.navbar img{
+    width: 60px;
+    height: 60px;
+    animation: bounce 5s ease-in-out infinite alternate;
+}
+@keyframes bounce{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
