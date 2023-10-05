@@ -22,7 +22,7 @@ nav {
     color: orangered;
 }
 
-.navbar img{
+/* .navbar img{
     width: 60px;
     height: 60px;
     animation: bounce 5s ease-in-out infinite alternate;
@@ -34,4 +34,4 @@ nav {
     100% {
         transform: rotate(-360deg);
     }
-}
+} */
