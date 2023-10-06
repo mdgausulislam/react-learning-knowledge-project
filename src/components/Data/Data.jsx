@@ -1,8 +1,11 @@
 import React from 'react';
 import './Data.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBookmark} from '@fortawesome/free-solid-svg-icons'
 
 const Data = (props) => {
-    const { img, profile, name, date, reading, icon, coder, coder1, text } = props.lerner1;
+    const { img, profile, name, date, reading, coder, coder1, text } = props.learn1;
+    const handleToAdd=props.handleToAdd;
     return (
         <div className="data">
             <img className="image-caption" src={img} alt="" />
@@ -15,11 +18,7 @@ const Data = (props) => {
                     </div>
 
                 </div>
-
-                <div className="reading">
-                    <p className="read">{reading}</p>
-                    <img className="icon-read" src={icon} alt="" />
-                </div>
+                    <p className="read">{reading}  <FontAwesomeIcon icon={faBookmark} /></p>
             </div>
             <div className="info-details">
                 <h1 className="text-name">{text}</h1>
@@ -27,7 +26,7 @@ const Data = (props) => {
                     <p>{coder}</p>
                     <p>{coder1}</p>
                 </div>
-                <a className="mark" href="/mark">Mark as read</a>
+                <a className="mark" onClick={()=>handleToAdd()} href="/mark">Mark as read</a>
             </div>
 
 

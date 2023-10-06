@@ -7,7 +7,7 @@
 }
 
 .image-caption {
-    width: 860px;
+    width: 95%;
     height: 450px;
     border-radius: 10px;
     margin: 24px;
@@ -65,13 +65,8 @@
     text-decoration-line: underline;
 }
 
-.reading {
-    display: flex;
-    align-items: center;
-}
-
 .read {
-    margin-right: 10px;
+    margin-right: 24px;
     color: rgba(17, 17, 17, 0.60);
     text-align: right;
     font-family: Exo 2;
