@@ -1,4 +1,4 @@
-.data-analysis{
+.data-analysis {
     position: fixed;
 }
 
@@ -13,4 +13,16 @@
     border: 1px solid #6047EC;
     background: rgba(96, 71, 236, 0.10);
     padding: 21px 40px;
+}
+
+.bookmark-blog {
+    color: #111;
+    font-family: Exo 2;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+    border-radius: 8px;
+    background: rgba(17, 17, 17, 0.05);
+    padding: 30px;
 }

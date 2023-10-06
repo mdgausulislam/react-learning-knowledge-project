@@ -7,6 +7,7 @@ const LoadData = () => {
 
     const [learner, setLearner] = useState([]);
     const [data, setData] = useState([]);
+    const [blog, setBlog] = useState([]);
     useEffect(() => {
         fetch('learning.json')
             .then(res => res.json())
@@ -18,6 +19,10 @@ const LoadData = () => {
         setData(newLearn);
     }
 
+    const handleToAddBookmark = (learn) => {
+        const newBlog = [...blog, learn];
+        setBlog(newBlog);
+    }
 
     return (
         <div className="data-container">
@@ -27,12 +32,14 @@ const LoadData = () => {
                         key={learn1.id}
                         learn1={learn1}
                         handleToAdd={handleToAdd}
+                    handleToAddBookmark={handleToAddBookmark}
                     ></Data>)
                 }
             </div>
             <div className="blog-container">
                 <Time
                     data={data}
+                    blog={blog}
                 ></Time>
             </div>
 
