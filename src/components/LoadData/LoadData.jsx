@@ -32,7 +32,7 @@ const LoadData = () => {
             </div>
             <div className="blog-container">
                 <Time
-                data={data}
+                    data={data}
                 ></Time>
             </div>
 

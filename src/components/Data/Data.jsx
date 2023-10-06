@@ -5,7 +5,7 @@ import { faBookmark} from '@fortawesome/free-solid-svg-icons'
 
 const Data = (props) => {
     const { img, profile, name, date, reading, coder, coder1, text } = props.learn1;
-    const handleToAdd=props.handleToAdd;
+    const handleToAdd = props.handleToAdd;
     return (
         <div className="data">
             <img className="image-caption" src={img} alt="" />
@@ -18,7 +18,7 @@ const Data = (props) => {
                     </div>
 
                 </div>
-                    <p className="read">{reading}  <FontAwesomeIcon icon={faBookmark} /></p>
+                    <p className="read">{reading} min read <FontAwesomeIcon icon={faBookmark} /></p>
             </div>
             <div className="info-details">
                 <h1 className="text-name">{text}</h1>
@@ -26,7 +26,8 @@ const Data = (props) => {
                     <p>{coder}</p>
                     <p>{coder1}</p>
                 </div>
-                <a className="mark" onClick={()=>handleToAdd()} href="/mark">Mark as read</a>
+                
+                <button onClick={()=>handleToAdd(props.learn1)} className="mark" href="">Mark as read</button>
             </div>
 
 
