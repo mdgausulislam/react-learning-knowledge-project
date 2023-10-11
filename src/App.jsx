@@ -1,17 +1,11 @@
-import React from 'react'
-import './App.css'
-import Header from './components/Header/Header'
-import LoadData from './components/LoadData/LoadData'
+import React from 'react';
 
-function App() {
- 
-
+const App = () => {
   return (
     <div>
-      <Header></Header>
-      <LoadData></LoadData>
+      
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

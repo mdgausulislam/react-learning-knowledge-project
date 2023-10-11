@@ -1,8 +1,0 @@
-.data-container{
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-}
-.learning-container{
-    margin: 50px;
-    gap: 50px;
-}
