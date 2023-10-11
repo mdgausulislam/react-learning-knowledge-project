@@ -8,7 +8,6 @@ const Header = () => {
             <div>
                 <h1>The Learning Knowledge</h1>
             </div>
-
             <div className='navbar-item'>
                 <a href="/">Home</a>
                 <a href="/about">About</a>
