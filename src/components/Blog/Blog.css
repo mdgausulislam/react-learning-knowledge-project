@@ -1,0 +1,9 @@
+.blog-container{
+    margin: 40px;
+}
+
+.blog-container img {
+    width: 845px;
+    height: 450px;
+    border-radius: 8px;
+}

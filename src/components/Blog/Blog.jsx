@@ -1,10 +1,10 @@
 import React from 'react';
-import './Blog.css'
+import './Blog.css';
 
 const Blog = ({blog}) => {
     const {coder,date,icon,img,name,reading,text}=blog;
     return (
-        <div className='learning-container'>
+        <div className='blog-container'>
            <img src={img} alt="" />
         </div>
     );
