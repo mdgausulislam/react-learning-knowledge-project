@@ -3,7 +3,7 @@ import './Blog.css';
 import { BeakerIcon, BookmarkSlashIcon } from '@heroicons/react/24/solid'
 
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog, handleAddToBookMark, handleMarkAsRead }) => {
     const { id, coder, date, icon, img, name, reading, text, profile } = blog;
     return (
         <div className='blog-container'>
@@ -21,7 +21,7 @@ const Blog = ({ blog }) => {
                         <p className='bookmark-read'>{reading}min read</p>
                     </div>
                     <div>
-                        <button onClick={()=>handleAddToBookMark()}>
+                        <button>
                             <span> <BookmarkSlashIcon className='icon-bookmark' /> </span>
                         </button>
 
@@ -37,8 +37,8 @@ const Blog = ({ blog }) => {
                     coder.map((hash, idx) => <span key={idx}> {hash}</span>)
                 }
             </p>
+            <button>  <a className='mark-as-read' href="">Mark as read</a></button>
 
-            <a className='mark-as-read' href="">Mark as read</a>
 
         </div>
     );
