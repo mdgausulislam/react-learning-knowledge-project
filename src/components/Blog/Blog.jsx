@@ -3,8 +3,8 @@ import './Blog.css';
 import { BeakerIcon, BookmarkSlashIcon } from '@heroicons/react/24/solid'
 
 
-const Blog = ({ blog, handleAddToRead,handleAddTOBookmark}) => {
-    const { id, coder, date, icon, img, name, reading, text, profile } = blog;
+const Blog = ({ blog, handleAddToBookmark, handleMarkAsRead }) => {
+    const { id, coder, date, img, name, reading, text, profile } = blog;
     return (
         <div className='blog-container'>
             <img className='image-cover' src={img} alt="" />
@@ -18,12 +18,12 @@ const Blog = ({ blog, handleAddToRead,handleAddTOBookmark}) => {
                 </div>
                 <div className='details-read'>
                     <div>
-                        <p className='bookmark-read'>{reading}min read</p>
+                        <p className='bookmark-read'>{reading} min read</p>
                     </div>
                     <div>
-                        <button onClick={()=>handleAddTOBookmark(reading)}>
-                            {/* <span> <BookmarkSlashIcon className='icon-bookmark' /> </span> */}
-                            Click Here
+
+                        <button  onClick={() => handleAddToBookmark(blog)}>
+                            Click BookMark
                         </button>
 
                     </div>
@@ -38,9 +38,12 @@ const Blog = ({ blog, handleAddToRead,handleAddTOBookmark}) => {
                     coder.map((hash, idx) => <span key={idx}> {hash}</span>)
                 }
             </p>
-            <button onClick={()=>handleAddToRead(blog)}>
-              Mark as read
+
+            <button onClick={() => handleMarkAsRead(id, reading)}>
+                {/* <span> <BookmarkSlashIcon className='icon-bookmark' /> </span> */}
+                Mark Add Read
             </button>
+
 
 
         </div>

@@ -6,21 +6,21 @@ import Bookmarks from '../Bookmarks/Bookmarks';
 
 const Home = () => {
     const blogs = useLoaderData();
-    const [newBlog, setBlog] = useState([]);
-    const [bookmark, setBookmark] = useState([]);
 
+    const [bookmarks, setBookmarks] = useState([]);
+    const [readingTime, setReadingTime] = useState(0)
 
-
-    const handleAddToRead = blog => {
-        const newCart = [...newBlog, blog]
-        setBlog(newCart);
+    const handleAddToBookmark = blog => {
+        const newBookmarks = [...bookmarks, blog];
+        setBookmarks(newBookmarks);
     }
 
-
-
-    const handleAddTOBookmark = reading => {
-        const newBookmark = [...bookmark, reading];
-        setBookmark(newBookmark);
+    const handleMarkAsRead = (id, time) => {
+        const newReadingTime = readingTime + time;
+        setReadingTime(newReadingTime);
+      
+        // const remainingBookmarks = bookmarks.filter(bookmark => bookmark.id !== id);
+        // setBookmarks(remainingBookmarks);
     }
 
     return (
@@ -30,17 +30,16 @@ const Home = () => {
                     blogs.map(blog => <Blog
                         key={blog.id}
                         blog={blog}
-                        handleAddToRead={handleAddToRead}
-                        handleAddTOBookmark={handleAddTOBookmark}
+                        handleAddToBookmark={handleAddToBookmark} 
+                        handleMarkAsRead={handleMarkAsRead}
                     ></Blog>)
                 }
             </div>
             <div className='bookmark-container'>
                 <Bookmarks
-                    newBlog={newBlog}
-                    bookmark={bookmark}
-                >
-                </Bookmarks>
+                     bookmarks={bookmarks} 
+                     readingTime={readingTime}
+                ></Bookmarks>
             </div>
         </div>
     );
