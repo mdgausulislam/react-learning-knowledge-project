@@ -21,14 +21,22 @@ const Blog = ({ blog }) => {
                         <p className='bookmark-read'>{reading}min read</p>
                     </div>
                     <div>
-                        <span> <BookmarkSlashIcon className='icon-bookmark' /> </span>
+                        <button onClick={()=>handleAddToBookMark()}>
+                            <span> <BookmarkSlashIcon className='icon-bookmark' /> </span>
+                        </button>
+
                     </div>
 
                 </div>
             </div>
 
             <h2 className='title-text'>{text}</h2>
-            <p>{coder}</p>
+            <p>
+
+                {
+                    coder.map((hash, idx) => <span key={idx}> {hash}</span>)
+                }
+            </p>
 
             <a className='mark-as-read' href="">Mark as read</a>
 

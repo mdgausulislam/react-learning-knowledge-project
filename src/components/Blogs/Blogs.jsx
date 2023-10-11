@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Blog from '../Blog/Blog';
 import './Blogs.css'
+import Bookmarks from '../Bookmarks/Bookmarks';
 
 const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
@@ -24,7 +25,9 @@ const Blogs = () => {
                 }
             </div>
             <div className='bookmark-container'>
-                <h1>Md Gousul Islam</h1>
+              <Bookmarks 
+              blogs={blogs}
+              ></Bookmarks>
             </div>
         </div>
     );
